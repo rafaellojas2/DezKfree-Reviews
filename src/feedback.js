@@ -94,7 +94,7 @@ function iteRan(lis) {
   return lis[Math.floor(Math.random() * lis.length)]
 }
 
-export async function get(productId, ownerMemberId, count, limitOri, strCriAvaFak, objCriAvaFak) {
+export async function get(productId, ownerMemberId, count, limitOri, strCriAvaFak, objCriAvaFak, projectId) {
   let allFeedbacks = [];
 
   let limitPages = Math.ceil(limitOri / 10);
@@ -123,7 +123,7 @@ export async function get(productId, ownerMemberId, count, limitOri, strCriAvaFa
     const data = getFeedbackData(feedbackHtml);
     //console.log(data)
     var dataNova = [];
-    if (data.length >= 1) { dataNova = await fakerName(data); } // Add Nomes a Cada Item da Lista
+    if (data.length >= 1) { dataNova = await fakerName(data, projectId); } // Add Nomes a Cada Item da Lista
 
     allFeedbacks = [...allFeedbacks, ...dataNova];
 

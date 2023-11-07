@@ -4,7 +4,7 @@ import { load } from 'cheerio';
 import { get } from './variants.js';
 import { get as _get } from './feedback.js';
 
-async function AliexpressProductScraper(productId, feedbackLimit=Infinity, strCriAvaFak, objCriAvaFak) {
+async function AliexpressProductScraper(productId, feedbackLimit=Infinity, strCriAvaFak, objCriAvaFak, projectId) {
   const FEEDBACK_LIMIT = feedbackLimit || 10;
   const browser = await launch({headless: 'new'});
   const page = await browser.newPage();
@@ -37,7 +37,8 @@ async function AliexpressProductScraper(productId, feedbackLimit=Infinity, strCr
       data.feedbackComponent.totalValidNum,
       FEEDBACK_LIMIT,
       strCriAvaFak,
-      objCriAvaFak
+      objCriAvaFak,
+      projectId
     );
   }
 

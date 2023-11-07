@@ -28,21 +28,21 @@ import { utils, writeFile } from 'xlsx';
 
 // Configuração
 
-var strIdPro = '1005005857182018'  // Digite o ID do Produto Que Fica Na Aliexpress: || '1005004798428996'
+var strIdPro = '1005005750030125'  // Digite o ID do Produto Que Fica Na Aliexpress: || '1005004798428996'
 
-var numMaxAva = 70  // Digite o Número Máximo de Reviews Que Você Deseja:
+var numMaxAva = 17  // Digite o Número Máximo de Reviews Que Você Deseja:
 
-var strCriAvaFak = 'Sim'  // Deseja Chegar ao Número Maximo De Avaliações Criando Novas Avaliações?
+var strCriAvaFak = 'Não'  // Deseja Chegar ao Número Maximo De Reviews Criando Reviews Fakes?
 
 var objCriAvaFak = {  // Escolha A Porcentagem De Chance de Ser Criado Cada Nota:
-  est_5: {por: 83},  // 85 ou 90
+  est_5: {por: 80},  // 85 ou 90
   est_4: {por: 15},  // 10 ou 15
-  est_3: {por: 2},  // 2 ou 5
+  est_3: {por: 5},  // 2 ou 5
   est_2: {por: 0},  // 0 ou 1
   est_1: {por: 0},  // 0 ou 1
 }
 
-var strNomProNor = 'Câmeras De Vigilância Por Vídeo, Proteção'  //  Digite o Nome Do Produto Assim Como Esta no Titulo da Trustoo, Ex: 'Protetor Para Banho Evita Sabão Nos Olhos'
+var strNomProNor = 'Protetor Para Banho Evita Sabão Nos Olhos'  //  Digite o Nome Do Produto Assim Como Esta no Titulo da Trustoo, Ex: 'Protetor Para Banho Evita Sabão Nos Olhos'
 
 var strNomProBru = null  //  Digite o Nome Do Produto Formatado Assim Como o Trustoo Reviews Pede, Ex: 'protetor-para-banho-evita-sabao-nos-olhos'
 
@@ -50,6 +50,7 @@ var strSelFil = 'Tudo'  // Selecione Um Filtro: 'Tudo' ou 'Basico' ou 'Exigente'
 
 var strPasExc = './main/planilhas/'  // Escolha a Pasta Onde Vai Ser Salvo a Planilha. OBS: Deve Se Criar a Pasta Antes de Digita-la Aqui
 
+var projectId = 'traduzir-feedback'  // Nome do Projeto no Google Cloud
 
 
 
@@ -70,7 +71,7 @@ if (strSelFil === 'Tudo') {
     
     var numMaxApeFot = Infinity  // Qual Deve ser a Quantidade Máxima De Reviews Com Foto? | 0 ou 368 ou Infinity
     
-    var lisFilTirCom = [1,2,3]  // Quer Excluir as Imagens E os Comentarios De Reviews com Nota Baixa? | [] ou [1, 2] ou [1, 2, 3]
+    var lisFilTirCom = []  // Quer Excluir as Imagens E os Comentarios De Reviews com Nota Baixa? | [] ou [1, 2] ou [1, 2, 3]
     
     var strFilResEst = 'Não'  // Quer Restringir a Quantidade de Cada Review Pela Nota? | 'Sim' ou 'Não'
     
@@ -131,7 +132,7 @@ if (strSelFil === 'Exigente') {
 
   var strFilApeSemFot = 'Sim'  // Quer Limitar a Quantidade de Reviews, Que Tenham Apenas Foto? | 'Sim' ou 'Não'
 
-  var numMaxApeFot = 121  // Qual Deve ser a Quantidade Máxima De Reviews Com Foto? | 0 ou 368 ou Infinity
+  var numMaxApeFot = 97  // Qual Deve ser a Quantidade Máxima De Reviews Com Foto? | 0 ou 368 ou Infinity
 
   var lisFilTirCom = [1, 2, 3]  // Quer Excluir as Imagens E os Comentarios De Reviews com Nota Baixa? | [] ou [1, 2] ou [1, 2, 3]
 
@@ -157,14 +158,14 @@ if (strSelFil === 'Exigente') {
 
 
 
-// Código Raiz:
+// Aparti Daqui é Código:
 
 console.log(``)
 console.log(` > Aguarde... `)
 console.log(` > Pesquisa Sendo Feita Pelo Produto de ID: ${strIdPro} `)
 console.log(``)
 
-var product = scrape(strIdPro, numMaxAva, strCriAvaFak, objCriAvaFak)
+var product = scrape(strIdPro, numMaxAva, strCriAvaFak, objCriAvaFak, projectId)
 
 product.then(res => {
   var lisRev = res.feedback

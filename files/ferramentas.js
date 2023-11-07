@@ -6,11 +6,11 @@ import { v2 } from '@google-cloud/translate';
 
 
 
-const { Translate } = v2;
-const projectId = 'traduzir-feedback'
-const translate = new Translate({projectId})
 
-async function traTex(text) {
+async function traTex(text, projectId) {
+
+  const { Translate } = v2;
+  const translate = new Translate({projectId})
 
   if (text.length === 0) {return ''}
 
@@ -37,7 +37,7 @@ function gerNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-async function fakerName(lisRev) {
+async function fakerName(lisRev, projectId) {
 
   var novoArray = []
   
@@ -74,7 +74,7 @@ async function fakerName(lisRev) {
     for (let c = 0; c < lisRevPar.length; c++) {
         var objRevAtu = lisRevPar[c]
 
-        var strTexTra = await traTex(objRevAtu.content)
+        var strTexTra = await traTex(objRevAtu.content, projectId)
         objRevAtu.content = strTexTra
 
         if ((c === lisRevPar.length-1 || c === lisRevPar.length-2) && c !== 0) {
