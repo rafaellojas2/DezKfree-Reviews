@@ -1,17 +1,63 @@
 # DezKfree Reviews
-Maneira fácil de exportar e filtrar feedbacks da Aliexpress e transformar em arquivo .xlsx formatado para o aplicativo da Shopify Trustoo Reviews.
+Maneira fácil de exportar e filtrar feedbacks da Aliexpress e transformar em arquivo .xlsx formatado para o aplicativo da Shopify Trustoo Reviews da Shopify
 
-# Instalção
-`git clone https://github.com/rafaellojas2/dezkfree-reviews`
+## Instalção
+Clone o repositório:
 
-`cd ./dezkfree-reviews`
+**`git clone https://github.com/rafaellojas2/dezkfree-reviews`**
 
-`npm install dezkfree-reviews`
+Acesse o repositório:
+
+**`cd ./dezkfree-reviews`**
+
+Instale as dependências dentro do repositório:
+
+**`npm install dezkfree-reviews`**
+
+## Google Cloud
+
+A validação do Google Cloud serve para instalar o Cloud Translation e assim traduzir os feedbacks
+
+### Criar conta
+
+1° **Crie uma conta no Google Cloud** (Necessário cartão de crédito ou débito para criar a conta, mas a API que será usada é gratuita): 
+
+Consulte os preços: https://console.cloud.google.com/freetrial
+
+Crie a conta: **https://console.cloud.google.com/freetrial**
+
+3° **Crie um projeto** com o nome "traduzir-feedback": **https://console.cloud.google.com/projectcreate**
+
+4° **Ative a API Cloud Translation** para esse projeto: **https://console.cloud.google.com/apis/library/translate.googleapis.com**
+
+### Validar conta
+
+1° **Instale o SDK Google Cloud** no seu computador: **https://cloud.google.com/sdk/docs/install?hl=pt-br**
+
+2° Execute o código para fazer **login com Google Cloud**:
+
+**`gcloud auth application-default login`**
+
+3° Execute o código para **válidar seu projeto**:
+
+**`gcloud auth application-default set-quota-project traduzir-feedback`**
+
+# Funções
+**Você pode alterar várias configurações e filtros como:**
+- Selecionar a quantidade máxima de feedbacks
+- Gerar feedbacks falsos com a quantidade de estrelas que quiser
+- Extrair apenas feedbacks brasileiros
+- Extrair apenas feedbacks que tenham fotos
+- Excluir imagem e comentários de feedbacks negativos
+- Restringir quantidade de feedback por nota
+- Todos os comentários são traduzidos para pt-BR
 
 # Configuração
 
-Acesse o arquivo `./dezkfree-reviews/main/start.js` e edite as configurações para suas prefêrencias
+Acesse o arquivo `./dezkfree-reviews/main/start.js` e edite os filtros e as configurações para suas prefêrencias
 
 # Inicialização
 
-`npm start`
+Ao iniciar o projeto automáticamente o produto será pesquisado na Aliexpress, seus feedbacks serão extraidos e o arquivo .xlxs começará a ser gerado
+
+**`npm start`**
