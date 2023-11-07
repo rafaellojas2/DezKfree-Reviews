@@ -34,7 +34,7 @@ Crie a conta: **https://console.cloud.google.com/freetrial**
 
 1° **Instale o SDK Google Cloud** no seu computador: **https://cloud.google.com/sdk/docs/install**
 
-2° **Faça o login** com sua conta Google Cloud:
+2° **Faça o login** com sua conta da Google Cloud:
 
 **`gcloud auth application-default login`**
 
