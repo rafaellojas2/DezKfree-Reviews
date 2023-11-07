@@ -32,7 +32,7 @@ Crie a conta: **https://console.cloud.google.com/freetrial**
 
 ### Validar conta
 
-1° **Instale o SDK Google Cloud** no seu computador: **https://cloud.google.com/sdk/docs/install?hl=pt-br**
+1° **Instale o SDK Google Cloud** no seu computador: **https://cloud.google.com/sdk/docs/install**
 
 2° **Faça o login** com sua conta Google Cloud:
 
