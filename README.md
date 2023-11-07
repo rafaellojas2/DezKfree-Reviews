@@ -20,9 +20,9 @@ A validação do Google Cloud serve para instalar o Cloud Translation e assim tr
 
 ### Criar conta
 
-1° **Crie uma conta no Google Cloud** (Necessário cartão de crédito ou débito para criar a conta, mas a API que será usada é gratuita): 
+1° **Crie uma conta no Google Cloud** (Necessário cartão de crédito ou débito para criar a conta, mas é liberado gratuitamente traduzir até 500 mil caracteres por mês, aparti disso é cobrado US$20 por milhão. A media de caracteres a cada 100 feedbacks é de 50 caracteres, logo uma conta da Google Cloud consegue por mês traduzir aproximadamente 10 mil feedbacks): 
 
-Consulte os preços: https://console.cloud.google.com/freetrial
+Consulte os preços: https://cloud.google.com/translate/pricing
 
 Crie a conta: **https://console.cloud.google.com/freetrial**
 
