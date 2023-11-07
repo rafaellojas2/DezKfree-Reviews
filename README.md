@@ -66,3 +66,7 @@ Ao iniciar o comando `npm start` automáticamente o produto será pesquisado na 
 Abra o CMD e através dele acesse a pasta criada `./dezkfree-reviews`, logo depois execute o comando:
 
 **`npm start`**
+
+# ESSE REPOSITÓRIO É UMA ADAPTAÇÃO DO @sudheer-ranga
+
+Repositório original: https://github.com/sudheer-ranga/aliexpress-product-scraper
