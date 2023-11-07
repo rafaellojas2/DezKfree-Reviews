@@ -61,7 +61,7 @@ O arquivo possui comentários explicado a função de cada váriavel
 
 # Inicialização
 
-Ao iniciar o comando automáticamente o produto será pesquisado na Aliexpress, seus feedbacks serão extraidos e o arquivo .xlxs começará a ser gerado
+Ao iniciar o comando `npm start` automáticamente o produto será pesquisado na Aliexpress, seus feedbacks serão extraidos e o arquivo .xlxs começará a ser gerado
 
 Abra o CMD e acesse a pasta criada `./dezkfree-reviews`, logo depois execute o comando:
 
