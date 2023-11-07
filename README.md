@@ -69,6 +69,6 @@ Abra o CMD e através dele acesse a pasta criada `./dezkfree-reviews`, logo depo
 
 # Créditos
 
-## ESSE REPOSITÓRIO É UMA ADAPTAÇÃO DO @sudheer-ranga
+### ESSE REPOSITÓRIO É UMA ADAPTAÇÃO DO @sudheer-ranga
 
 Repositório original: https://github.com/sudheer-ranga/aliexpress-product-scraper
