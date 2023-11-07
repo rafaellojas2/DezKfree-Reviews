@@ -1,5 +1,5 @@
 # DezKfree Reviews
-Maneira fácil de exportar e filtrar feedbacks da Aliexpress e transformar em arquivo .xlsx formatado para o aplicativo da Shopify Trustoo Reviews da Shopify
+Maneira fácil de exportar e filtrar feedbacks da Aliexpress e transformar-los em arquivo .xlsx formatado visando o template do aplicativo da Shopify Trustoo Reviews
 
 ## Instalção
 Clone o repositório:
