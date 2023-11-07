@@ -14,9 +14,7 @@ Instale as dependências dentro do repositório:
 
 **`npm install dezkfree-reviews`**
 
-## Google Cloud
-
-A validação do Google Cloud serve para instalar o Cloud Translation e assim traduzir os feedbacks
+## Traduzir feedbacks com Google Cloud
 
 ### Criar conta
 
@@ -34,11 +32,11 @@ Crie a conta: **https://console.cloud.google.com/freetrial**
 
 1° **Instale o SDK Google Cloud** no seu computador: **https://cloud.google.com/sdk/docs/install?hl=pt-br**
 
-2° Execute o código para fazer **login com Google Cloud**:
+2° **Faça o login** com sua conta Google Cloud:
 
 **`gcloud auth application-default login`**
 
-3° Execute o código para **válidar seu projeto**:
+3° **Valide seu projeto**:
 
 **`gcloud auth application-default set-quota-project traduzir-feedback`**
 
@@ -51,13 +49,18 @@ Crie a conta: **https://console.cloud.google.com/freetrial**
 - Excluir imagem e comentários de feedbacks negativos
 - Restringir quantidade de feedback por nota
 - Todos os comentários são traduzidos para pt-BR
+- Nomes e sobrenomes gerados são brasileiros
 
-# Configuração
+# Como configurar
 
 Acesse o arquivo `./dezkfree-reviews/main/start.js` e edite os filtros e as configurações para suas prefêrencias
 
+O arquivo possui comentários explicado a função de cada váriavel
+
 # Inicialização
 
-Ao iniciar o projeto automáticamente o produto será pesquisado na Aliexpress, seus feedbacks serão extraidos e o arquivo .xlxs começará a ser gerado
+Ao iniciar o comando automáticamente o produto será pesquisado na Aliexpress, seus feedbacks serão extraidos e o arquivo .xlxs começará a ser gerado
+
+Abra o CMD e acesse a pasta criada `./dezkfree-reviews`, logo depois execute o comando:
 
 **`npm start`**
