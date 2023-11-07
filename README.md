@@ -16,7 +16,7 @@ Instale as dependências dentro do repositório:
 
 ## Traduzir feedbacks com Google Cloud
 
-A validação do Google Cloud serve para instalar o Cloud Translation e assim traduzir os feedbacks
+A validação do Google Cloud serve para a execusão do Cloud Translation e assim traduzir os feedbacks
 
 ### Criar conta
 
